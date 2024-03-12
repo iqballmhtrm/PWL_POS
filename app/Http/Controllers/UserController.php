@@ -26,7 +26,7 @@ class UserController extends Controller
         // return view('user', ['data' => $user]);
         // 3)
         // $data = [
-        //     'user_id' => 4,
+        //     'user_id' => 18,
         //     'nama' => 'Pelanggan Pertama',
         // ];
         // UserModel::where('username', 'customer-1')->update($data);
