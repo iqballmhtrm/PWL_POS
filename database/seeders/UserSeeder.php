@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
 class UserSeeder extends Seeder
 {
     /**
@@ -17,25 +18,33 @@ class UserSeeder extends Seeder
             [
                 'user_id' => 1,
                 'level_id' => 1,
-                'username' => 'admin',
-                'nama' => 'Administrator',
-                'password' => Hash::make('12345'),          
+                'username' => 'Andy',
+                'nama' => 'Andy',
+                'password' => Hash::make('123'),
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'user_id' => 2,
                 'level_id' => 2,
-                'username' => 'manager',
-                'nama' => 'Manager',
-                'password' => Hash::make('12345'),          
+                'username' => 'nugraha',
+                'nama' => 'nugraha',
+                'password' => Hash::make('12345'),
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'user_id' => 3,
                 'level_id' => 3,
-                'username' => 'staff',
-                'nama' => 'Staff/Kasir',
-                'password' => Hash::make('12345'),          
+                'username' => 'putra',
+                'nama' => 'putra',
+                'password' => Hash::make('1234567'),
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
+
+            // Tambahkan data dummy lainnya jika diperlukan
         ];
-        DB::table('m_user')->insert($data);
+        DB::table('m_users')->insert($data);
     }
 }
