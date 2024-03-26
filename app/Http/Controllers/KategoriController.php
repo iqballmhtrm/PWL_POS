@@ -1,8 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-//jobshet 5 
-//10
+
 use Illuminate\Http\Request;
 use App\DataTables\KategoriDataTable;
 
