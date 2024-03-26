@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Andy</b>Company',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -196,9 +196,9 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar' => 'sidebar-light-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-dark navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -292,7 +292,7 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Menu-Configuration
     |
     */
-// tuags praktikum 2
+
     'menu' => [
         // Navbar items:
         [
@@ -304,11 +304,31 @@ return [
             'type' => 'fullscreen-widget',
             'topnav_right' => true,
         ],
-
+        // Tugas Praktikum 2
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
+            
+        ],
+
+        [
+            'text' => 'Kategori',
+            'url' => '/kategori',
+            'icon' => 'far fa-fw fa-file',
+            'label_color' => 'success',
+        ],
+        [
+            'text' => 'User',
+            'url' => '/m_users',
+            'icon' => 'far fa-fw fa-file',
+            'label_color' => 'success',
+        ],
+        [
+            'text' => 'Level',
+            'url' => '/level',
+            'icon' => 'far fa-fw fa-file',
+            'label_color' => 'success',
         ],
         [
             'text' => 'blog',
@@ -320,13 +340,7 @@ return [
             'url' => 'admin/pages',
             'icon' => 'far fa-fw fa-file',
             'label' => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'MENU'],
-        [
-            'text' => 'Kategori',
-            'url' => '../public/kategori',
-            'icon' => 'fas fa-fw fa-bars',
+            'label_color' => 'danger',
         ],
         ['header' => 'account_settings'],
         [

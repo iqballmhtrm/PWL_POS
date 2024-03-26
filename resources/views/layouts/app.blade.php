@@ -1,12 +1,12 @@
 @extends('adminlte::page')
-
 {{-- Extend and customize the browser title --}}
 @section('title')
     {{ config('adminlte.title') }}
-    @hasSection('subtitle') | @yield('subtitle') @endif
+    @hasSection('subtitle')
+        | @yield('subtitle')
+    @endif
 @stop
 
-@vite('resources/js/app.js')
 {{-- Extend and customize the page content header --}}
 @section('content_header')
     @hasSection('content_header_title')
@@ -41,19 +41,25 @@
 
 {{-- Add common Javascript/Jquery code --}}
 @push('js')
-    <script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 @endpush
 
-@stack('scripts')
-
-{{-- Add common CSS customizations --}}
 @push('css')
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.dataTables.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" />
     <style type="text/css">
-        {{-- You can add AdminLTE customizations here --}}
+        /* {{-- You can add AdminLTE customizations here --}} */
         /*
+        .content-wrapper {
+            background-color: #f8f9fa; /* Warna latar belakang konten */
+
+        .content-header {
+            background-color: #ffffff; /* Warna latar belakang header konten */
+            color: #fff; /* Warna teks header konten */
+        }
         .card-header {
-            border-bottom: none;
+            background-color: #2ab54b; /* Warna latar belakang header card */
+            color: #fff; /* Warna teks header card */
+            border-bottom: none; /* Hapus garis bawah header card */
         }
         .card-title {
             font-weight: 600;
@@ -61,3 +67,5 @@
         */
     </style>
 @endpush
+
+@stack('scripts')

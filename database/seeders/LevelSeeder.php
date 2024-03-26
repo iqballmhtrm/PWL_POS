@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class LevelSeeder extends Seeder
 {
@@ -13,12 +13,12 @@ class LevelSeeder extends Seeder
      */
     public function run(): void
     {
+        //
         $data = [
-            ['level_id' => 1, 'level_code' => 'ADM', 'level_nama' => 'Administrasi'],
-            ['level_id' => 2, 'level_code' => 'MNG', 'level_nama' => 'Manager'],
-            ['level_id' => 3, 'level_code' => 'STF', 'level_nama' => 'Staff/Kasir'],
-
+            ['level_id' => 1, 'level_code' => 'ADM', 'level_code_nama' => 'Administrator'],
+            ['level_id' => 2, 'level_code' => 'MNG', 'level_code_nama' => 'Manager'],
+            ['level_id' => 3, 'level_code' => 'STF', 'level_code_nama' => 'Staff/Kasir'],
         ];
-        DB::table('m_level')->insert($data);
+        DB::table('m_levels')->insert($data);
     }
 }

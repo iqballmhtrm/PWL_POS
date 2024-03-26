@@ -23,18 +23,12 @@ class KategoriDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
             ->addColumn('action', function ($data) {
-                return '<div class="d-flex gap-1">
-                        <a href="' . route('kategori.edit', $data->kategori_id) . '" class="btn btn-warning" style="width: 40px; height: 40px;">
-                            <i class="fas fa-edit"></i>
-                        </a>
-                        <form action="' . route('kategori.destroy', $data->kategori_id) . '" method="POST" style="display: inline;">
-                            ' . csrf_field() . '
-                            ' . method_field('DELETE') . '
-                            <button type="submit" class="btn btn-danger" style="width: 40px; height: 40px;"><i class="fas fa-trash"></i></button>
-                        </form>
-                    </div>';
-            })
-            ->setRowId('id');
+            return '<div class="btn-group" role="group">'
+                . '<a href="' . route('/kategori/edit', $data->kategori_id) . '" class="btn btn-sm btn-warning">Edit</a>'
+                . '<a href="' . route('/kategori/hapus', $data->kategori_id) . '" class="btn btn-sm btn-danger">Delete</a>'
+                . '</div>';
+        })
+            ->setRowId('kategori_id');
     }
 
     /**
@@ -44,8 +38,9 @@ class KategoriDataTable extends DataTable
     {
         return $model->newQuery();
     }
-
-    //tugas praktikum 1 
+    /**
+     * Optional method if you want to use the html builder.
+     */
     public function html(): HtmlBuilder
     {
         return $this->builder()
@@ -61,11 +56,9 @@ class KategoriDataTable extends DataTable
                 Button::make('pdf'),
                 Button::make('print'),
                 Button::make('reset'),
-                Button::make('reload'),
-                Button::make('add'),
+                Button::make('reload')
             ]);
     }
-
     /**
      * Get the dataTable columns definition.
      */
@@ -73,7 +66,7 @@ class KategoriDataTable extends DataTable
     {
         return [
             Column::make('kategori_id'),
-            Column::make('kategori_code'),
+            Column::make('kategori_kode'),
             Column::make('kategori_nama'),
             Column::make('created_at'),
             Column::make('updated_at'),
@@ -84,7 +77,6 @@ class KategoriDataTable extends DataTable
                 ->addClass('text-center'),
         ];
     }
-
     /**
      * Get the filename for export.
      */
