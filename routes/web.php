@@ -21,8 +21,10 @@ Route::get('/', function () {
 });
 
 Route::get('/level', [LevelController::class, 'index']);
-//12
+//praktikum 2-12
 Route::get('/kategori', [KategoriController::class, 'index']);
+//
+//praktikum 3-1
 Route::get('/kategori/create', [KategoriController::class, 'create']);
 Route::post('/kategori', [KategoriController::class, 'store']);
 Route::put('/kategori/{id}', [KategoriController::class, 'update'])->name('kategori.update');
