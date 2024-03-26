@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+
 {{-- Customize layout sections --}}
 
 @section('subtitle', 'Welcome')
