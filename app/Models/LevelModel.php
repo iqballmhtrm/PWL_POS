@@ -2,20 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Foundation\Auth\User;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class  LevelModel extends Model
+class LevelModel extends Model
 {
     use HasFactory;
+    protected $table = 'm_level';
 
-    protected $table = 'm_levels';
-    protected $primaryKey = 'level_id';
-
-    public function users(): HasMany
+    public function user()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsTo(UserModel::class);
     }
 }
