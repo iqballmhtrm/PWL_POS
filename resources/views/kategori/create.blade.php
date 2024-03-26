@@ -4,6 +4,7 @@
 @section('content_header_title', 'Kategori')
 @section('content_header_subtitle', 'Create')
 
+
 @section('content')
 <div class="container">
     <div class="card card-primary">
