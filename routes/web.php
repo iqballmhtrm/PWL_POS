@@ -27,7 +27,7 @@ Route::get('/kategori', [KategoriController::class, 'index']);
 //praktikum 3-1
 Route::get('/kategori/create', [KategoriController::class, 'create']);
 Route::post('/kategori', [KategoriController::class, 'store']);
-//tugas praktikum 3-2
+//tugas praktikum 3-3
 Route::put('/kategori/{id}', [KategoriController::class, 'update'])->name('kategori.update');
 Route::get('/kategori/{id}/edit', [KategoriController::class, 'edit'])->name('kategori.edit');
 //
