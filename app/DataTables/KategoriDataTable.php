@@ -1,6 +1,7 @@
 <?php
 
 namespace App\DataTables;
+
 use App\Models\KategoriModel;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
@@ -44,9 +45,7 @@ class KategoriDataTable extends DataTable
         return $model->newQuery();
     }
 
-    /**
-     * Optional method if you want to use the html builder.
-     */
+    //tugas praktikum 1 
     public function html(): HtmlBuilder
     {
         return $this->builder()
