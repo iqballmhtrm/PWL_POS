@@ -292,7 +292,7 @@ return [
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Menu-Configuration
     |
     */
-
+// tuags praktikum 2
     'menu' => [
         // Navbar items:
         [
